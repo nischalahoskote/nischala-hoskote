@@ -1,0 +1,255 @@
+/* 
+  Google Fonts:
+  - Playfair Display (headings, 400)
+  - Lora (body)
+*/
+
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body with subtle overlay on the background image */
+body {
+  /* Body font = Lora */
+  font-family: 'Lora', serif;
+  color: #333;
+  background:
+    linear-gradient(
+      rgba(255, 255, 255, 0.2), 
+      rgba(255, 255, 255, 0.2)
+    ),
+    url("images/background.jpg") center center fixed no-repeat;
+  background-size: cover;
+}
+
+/* Content Wrapper: a white-ish panel with slight transparency & shadow */
+.content-wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  min-height: 100vh;
+  background-color: rgba(255, 255, 255, 0.95);
+  border-radius: 10px;
+  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.1);
+  overflow: auto;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #ddd;
+  padding: 1rem 2rem;
+  background-color: rgba(255, 255, 255, 0.95);
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+/* Use Playfair Display for headings, normal weight (400) */
+.nav-logo {
+  font-family: 'Playfair Display', serif;
+  font-weight: 400;
+  font-size: 1.25rem;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 400;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.nav-links li a:hover {
+  /* Adjust these colors if you'd like a different hover style */
+  color: #F9F8F6;
+  transform: scale(1.05);
+}
+
+/* All headings use Playfair Display at normal weight */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Playfair Display', serif;
+  font-weight: 400;
+}
+
+/* Hero Section */
+.hero {
+  text-align: center;
+  padding: 4rem 2rem;
+  border-bottom: 1px solid #eee;
+}
+
+.hero h1 {
+  font-size: 2.75rem;
+  margin-bottom: 1rem;
+  line-height: 1.2;
+  /* Subtle gradient text (optional) */
+  background: linear-gradient(90deg, #000000, #000000);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  color: #555;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* Sections */
+.section {
+  max-width: 900px;
+  margin: 3rem auto;
+  padding: 0 2rem;
+  animation: fadeInUp 0.8s ease both; /* Subtle fade-in animation */
+}
+
+.section h2 {
+  font-size: 1.75rem;
+  color: #333;
+  margin-bottom: 1.2rem;
+  position: relative;
+  margin-top: 1rem;
+}
+
+/* Decorative bar under section heading */
+.section h2::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 50px;
+  height: 3px;
+  background-color: #F9F8F6;
+  border-radius: 5px;
+}
+
+/* About Section */
+.about-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.about-image {
+  width: 160px;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease;
+}
+
+.about-image:hover {
+  transform: scale(1.05);
+}
+
+.section p {
+  color: #555;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+/* Custom list styling for bullet points:
+   - Indents the list
+   - Ensures bullets appear outside the text
+   - Optional: set list-style-type or color */
+.custom-list {
+  margin-left: 2em;
+  list-style-position: outside;
+  list-style-type: disc;
+  color: #333;
+}
+
+/* Experience/Education items */
+.experience-item,
+.education-item {
+  background-color: #fff;
+  border-left: 4px solid #F9F8F6;
+  padding: 1rem 1.2rem;
+  margin-bottom: 2rem;
+  border-radius: 5px;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.05);
+}
+
+.experience-item h3,
+.education-item h3 {
+  margin-bottom: 0.3rem;
+  color: #333;
+}
+
+.experience-item span,
+.education-item span {
+  display: block;
+  font-size: 0.9rem;
+  color: #777;
+  margin-bottom: 0.8rem;
+}
+
+/* Contact Section */
+#contact {
+  text-align: center;  /* Centers the heading "Contact" */
+}
+
+/* Container for contact items (Location, Phone, Email, LinkedIn) */
+.contact-content {
+  display: inline-block; /* allows the block to be centered within the section */
+  text-align: left;      /* left-align text inside the block */
+  margin: 1.5rem auto 0; /* center the block, add top margin */
+  max-width: 400px;      /* optionally limit the width for a clean look */
+}
+
+.contact-item {
+  margin-bottom: 0.75rem; /* space between each line */
+}
+
+.contact-item a {
+  text-decoration: none;
+  color: #0077b6; /* link color */
+  transition: color 0.3s ease;
+}
+
+.contact-item a:hover {
+  color: #005b86; /* hover color */
+}
+
+/* Footer */
+.footer {
+  text-align: center;
+  padding: 1rem;
+  border-top: 1px solid #ddd;
+  background-color: rgba(255, 255, 255, 0.95);
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.footer p {
+  color: #666;
+  font-size: 0.9rem;
+}
+
+/* Fade In Up Animation */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
